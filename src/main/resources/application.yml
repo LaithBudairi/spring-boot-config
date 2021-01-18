@@ -7,17 +7,14 @@ my:
   list:
     value: One,Two,Three
 
-db:
-  connection: "{connectionString: 'http://___', userName: 'foo', password: 'pass'}"
-  host: 127.0.0.1
-  port: 1200
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+       include: "*"
 
 spring:
-  profiles:
-    active: test
+  cloud:
+    config:
+      uri: http://localhost:8888
